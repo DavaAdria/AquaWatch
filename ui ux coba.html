@@ -1,0 +1,290 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaWatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+<body>
+
+    <nav class="navbar has-background-info-dark hsl(204, 71%, 39%)" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <!-- Logo -->
+      <a class="navbar-item" href="#">
+        <img src="assets/tnkj.png"Logo alt="site logo" style="max-height: 120px" class="py-1 px-1">
+      </a>
+       <a  class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </a>
+    </div>
+
+    <div class="navbar-item">
+      <div>
+        <span class="title is-3 has-text-light">A q u a W a t c h</span><br>
+        <span class="subtitle is-5 has-text-light">Sistem Pemantauan Kualitas Air Laut Secara Real-Time</span>
+      </div>
+    </div>
+
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+            <a class="navbar-item">Beranda</a>
+            <a class="navbar-item">Monitoring</a>
+        </div>
+      </div>  
+  </nav>
+
+   <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered is-multiline">
+  <div class="column is-12-tablet is-7-desktop">
+    <div  style="position: relative; padding-top: 3.5rem;">
+      <div class="is-flex is-align-items-center" style="gap: 10px; position: absolute; top: 0; left: 0; right: 0;">
+        <figure class="image is-48x48">
+          <img src="assets/dikti.png" alt="dikti">
+        </figure>
+        <figure class="image is-48x48">
+          <img src="assets/tnkj.png" alt="tnkj">
+        </figure>
+        <figure class="image is-48x48">
+          <img src="assets/undip.png" alt="undip">
+        </figure>
+        <figure class="image is-48x48">
+          <img src="assets/algopolosan.png" alt="algopolosan">
+        </figure>
+        <figure class="image is-48x48">
+          <img src="assets/algoproject.png" alt="algoproject">
+        </figure>
+      </div>
+
+ <section class="section">
+  <div class="container">
+    <div class="columns is-vcentered is-multiline">
+      
+      <div class="column is-12-mobile is-6-desktop">
+        <div class="box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15876.632758050702!2d110.55636693212531!3d-5.833311759660401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e73c5287b918525%3A0xfb14829d3265173f!2sPulau%20Sambangan!5e0!3m2!1sid!2sid!4v1754556609781!5m2!1sid!2sid" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+      </div>
+
+      <div class="column is-12-mobile is-6-desktop">
+        <div class="content">
+          <h1 class="title is-size-3-mobile is-size-2-desktop">ABOUT US</h1>
+          <p>
+            Sistem Pemantauan Kualitas Air Laut Berbasis IOT sebagai upaya mitigasi coral bleaching di Pulau Sambangan, Kepulauan Karimunjawa, Jepara.
+          </p>
+          <br />
+          <p><em>“Coral Needs Care, We Build Solutions!”</em></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   </section>
+
+ <section class="section">
+  <div class="container">
+    <!-- Judul dan Info Realtime -->
+    <h3 class="title is-size-4 mb-4 is-underlined">MONITORING DATA</h3>
+    <div class="columns is-vcentered is-mobile">
+      <div class="column is-narrow">
+        <figure class="image is-64x64">
+          <img src="assets/realtime.png" alt="Logo" style="max-height: 60px;">
+        </figure>
+      </div>
+      <div class="column">
+          <p id="realtime-clock">Loading time...</p>
+          <p><em>“Realtime Sensors”</em></p>
+      </div>
+    </div>
+
+    <script>
+    function updateClock() {
+      const now = new Date();
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const day = days[now.getDay()];
+      const date = now.getDate().toString().padStart(2, '0');
+      const month = (now.getMonth() + 1).toString().padStart(2, '0');
+      const year = now.getFullYear();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const formatted = `${day}, ${date}-${month}-${year} - ${hours}.${minutes}.${seconds} WIB`;
+
+      document.getElementById('realtime-clock').textContent = formatted;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+    <!-- Kartu Data Monitoring -->
+    <div class="columns is-multiline is-variable is-6 is-centered mt-5">
+      
+      <!-- SALINITAS -->
+      <div class="column is-10-mobile is-offset-1-mobile is-3-desktop">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <figure class="image is-64x64 is-inline-block mb-3">
+              <img src="assets/salinitas.png" alt="salinitas">
+            </figure>
+            <p class="title is-size-4">SALINITAS</p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <a href="#" class="has-text-grey">24 C</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+
+      <!-- SUHU -->
+      <div class="column is-10-mobile is-offset-1-mobile is-3-desktop">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <figure class="image is-64x64 is-inline-block mb-3">
+              <img src="assets/temperature-2-32.png" alt="suhu">
+            </figure>
+            <p class="title is-size-4">SUHU</p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <a href="#" class="has-text-grey">24 C</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+
+      <!-- PH -->
+      <div class="column is-10-mobile is-offset-1-mobile is-3-desktop">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <figure class="image is-64x64 is-inline-block mb-3">
+              <img src="assets/peha.png" alt="PH">
+            </figure>
+            <p class="title is-size-4">PH</p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <a href="#" class="has-text-grey">24 C</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+
+      <!-- PASUT -->
+      <div class="column is-10-mobile is-offset-1-mobile is-3-desktop">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <figure class="image is-64x64 is-inline-block mb-3">
+              <img src="assets/pasut.png" alt="pasut">
+            </figure>
+            <p class="title is-size-4">PASUT</p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <a href="#" class="has-text-grey">24 C</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+   <h3 class="title is-size-4 mb-4 is-underlined">GRAFIK DATA</h3>
+ <section class="section">
+  <div class="container">
+    <div class="columns is-multiline is-centered">
+
+      <div class="column is-6-desktop is-12-mobile">
+        <div class="card has-text-centered">
+          <div class="card-content">
+             <p class="title is-size-4">SALINITAS</p>
+            <figure class="image is-256x256 is-inline-block mb-3">
+              <img src="assets/grafikdata.png" alt="pasut">
+            </figure>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#" class="has-text-grey">Info</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6-desktop is-12-mobile">
+        <div class="card has-text-centered">
+          <div class="card-content">
+             <p class="title is-size-4">SUHU</p>
+            <figure class="image is-256x256 is-inline-block mb-3">
+              <img src="assets/grafikdata.png" alt="pasut">
+            </figure>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#" class="has-text-grey">Info</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6-desktop is-12-mobile">
+        <div class="card has-text-centered">
+          <div class="card-content">
+             <p class="title is-size-4">PH</p>
+            <figure class="image is-256x256 is-inline-block mb-3">
+              <img src="assets/grafikdata.png" alt="pasut">
+            </figure>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#" class="has-text-grey">Info</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6-desktop is-12-mobile">
+        <div class="card has-text-centered">
+          <div class="card-content">
+             <p class="title is-size-4">PASUT</p>
+            <figure class="image is-256x256 is-inline-block mb-3">
+              <img src="assets/grafikdata.png" alt="pasut">
+            </figure>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#" class="has-text-grey">Info</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+     <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Copyright 2025 Algomarine</p>
+        </div>
+     </footer>
+<script src="index.js"></script>
+</body>
+</html>
